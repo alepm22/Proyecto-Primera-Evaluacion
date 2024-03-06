@@ -28,4 +28,7 @@ it("Esta bien con descuento 1000:", () => {
   it("Esta bien con descuento 10000:", () => {
     expect(Calcular(1000, 10, 6.65)).toEqual(9598.50); // Redondeado a dos decimales
   });
+  it("Esta bien con descuento 30000:", () => {
+  expect(Calcular(1000, 30, 6.65)).toEqual(27195.75); // Redondeado a dos decimales
+  });
 });
