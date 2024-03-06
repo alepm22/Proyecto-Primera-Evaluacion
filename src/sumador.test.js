@@ -1,7 +1,7 @@
-import sumar from "./sumador.js";
+import Calcular from "./Bisiesto.js";
 
-describe("Sumar", () => {
-  it("deberia sumar dos numeros", () => {
-    expect(sumar(3, 2)).toEqual(5);
-  });
+describe("Calcular Total", () => {
+  it("Esta bien si:", () => {
+    expect(Calcular(20,3,8.25)).toEqual(64.95);
+  });
 });

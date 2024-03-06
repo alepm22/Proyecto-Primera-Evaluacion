@@ -1,6 +1,7 @@
-import bisiesto from "./Bisiesto.js";
+import Calcular from "./Bisiesto.js";
 const cantidad = document.querySelector("#cantidad-input");
 const precio = document.querySelector("#precio-input");
+const estadoSelect = document.querySelector("#estado--select");
 const form = document.querySelector("#totalizador-form");
 const resultadoDiv = document.querySelector("#resultado-div");
 form.addEventListener("submit", (event) => {
@@ -8,5 +9,8 @@ form.addEventListener("submit", (event) => {
 
   const cant = Number.parseInt(cantidad.value);
   const prec = Number.parseInt(precio.value);
-  resultadoDiv.innerHTML = "<p>Cantidad:  " + cant + "</p>" + "<p> Precio:  "+ prec+"</p>";
+  const estado = estadoSelect.value;
+  const total = Calcular(cant,prec,parseFloat(estado))
+  resultadoDiv.innerHTML = "<p>Cantidad:  " + cant + "</p>" + "<p> Precio:  "+ prec+"</p>"
+  + "<p> Tasa de impuesto:  "+ estado+"</p>" + "<p> Precio Neto:  "+ total+"</p>";
 });
