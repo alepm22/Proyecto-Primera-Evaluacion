@@ -19,11 +19,13 @@ it("Esta bien UT:", () => {
 it("Esta bien con descuento 1000:", () => {
   expect(Calcular(500, 2, 6.65)).toEqual(1034.51); // Redondeado a dos decimales
   });
-
   it("Esta bien con descuento 3000:", () => {
-    expect(Calcular(1000, 3, 6.65)).toEqual(3103.51); // Redondeado a dos decimales
+    expect(Calcular(1000, 3, 6.65)).toEqual(3039.53); // Redondeado a dos decimales
   });
   it("Esta bien con descuento 7000:", () => {
-    expect(Calcular(1000, 7, 6.65)).toEqual(7092.72); // Redondeado a dos decimales
+    expect(Calcular(1000, 7, 6.65)).toEqual(6942.91); // Redondeado a dos decimales
+  });
+  it("Esta bien con descuento 10000:", () => {
+    expect(Calcular(1000, 10, 6.65)).toEqual(9598.50); // Redondeado a dos decimales
   });
 });
