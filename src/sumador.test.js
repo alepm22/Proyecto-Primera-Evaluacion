@@ -9,5 +9,8 @@ it("Esta bien TX:", () => {
   });
 it("Esta bien AL:", () => {
   expect(Calcular(20,3,4)).toEqual(62.4);
-  });
+  }); 
+it("Esta bien NV:", () => {
+  expect(Calcular(20,3,8)).toEqual(64.8);
+  }); 
 });
