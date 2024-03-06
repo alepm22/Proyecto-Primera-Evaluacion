@@ -16,4 +16,14 @@ it("Esta bien NV:", () => {
 it("Esta bien UT:", () => {
   expect(Calcular(20,3,6.65)).toEqual(63.99);
   }); 
+it("Esta bien con descuento 1000:", () => {
+  expect(Calcular(500, 2, 6.65)).toEqual(1034.51); // Redondeado a dos decimales
+  });
+
+  it("Esta bien con descuento 3000:", () => {
+    expect(Calcular(1000, 3, 6.65)).toEqual(3103.51); // Redondeado a dos decimales
+  });
+  it("Esta bien con descuento 7000:", () => {
+    expect(Calcular(1000, 7, 6.65)).toEqual(7092.72); // Redondeado a dos decimales
+  });
 });

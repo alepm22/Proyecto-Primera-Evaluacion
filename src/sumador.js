@@ -1,14 +1,19 @@
-function Calcular (precio,cantidad,TI) {
-  const precio_neto= precio * cantidad;
-  if(precio_neto>=1000){
-
-    const newprecio_neto = precio_neto-(precio_neto * 0.03);
-    const impuesto = newprecio_neto * (TI/100);
-    const totalimpuesto = newprecio_neto + impuesto;
-    return totalimpuesto;
+function Calcular(precio, cantidad, TI) {
+  const precio_neto = precio * cantidad;
+  let descuento = 0;
+  if (precio_neto >= 1000 && precio_neto<3000) {
+    descuento = precio_neto * 0.03;
   }
-  const impuesto = precio_neto * (TI/100);
-  const totalimpuesto = precio_neto + impuesto;
-  return totalimpuesto;
+  else if(precio_neto >= 3000 && precio_neto<7000){
+    descuento = precio_neto * 0.05;
+  }
+  else if(precio_neto >= 7000 && precio_neto<10000 ){
+    descuento = precio_neto * 0.07;
+  }
+  const precio_neto_con_descuento = precio_neto - descuento;
+  const impuesto = precio_neto_con_descuento * (TI / 100);
+  const total_con_impuesto = precio_neto_con_descuento + impuesto;
+
+  return parseFloat(total_con_impuesto.toFixed(2));
 }
 export default Calcular;
