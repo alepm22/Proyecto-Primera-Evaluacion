@@ -51,7 +51,10 @@ import Calcular from "./Bisiesto.js";
     });
   });
   it("Esta bien con descuento 10000:", () => {
-    expect(Calcular(1000, 10, 6.65).total_con_impuesto).toEqual(9598.50);
+    expect(Calcular(1000, 10, 6.65)).toEqual({
+      total_con_impuesto: 9598.50,
+      descuento: 1000.00, // Porcentaje 10%
+    });
   });
   it("Esta bien con descuento 30000:", () => {
     expect(Calcular(1000, 30, 6.65).total_con_impuesto).toEqual(27195.75);
