@@ -32,6 +32,12 @@ import Calcular from "./Bisiesto.js";
       descuento: 0.00,
     });
   });
+  it("Esta bien Alimentos:", () => {
+    expect(Calcular(20, 3, 0)).toEqual({
+      total_con_impuesto: 62.71,
+      descuento: 0.00,
+    });
+  });
   it("Esta bien con descuento 1000:", () => {
     expect(Calcular(500, 2, 6.65)).toEqual({
       total_con_impuesto: 1034.51,
