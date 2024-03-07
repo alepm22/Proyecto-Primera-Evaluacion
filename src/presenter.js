@@ -12,7 +12,15 @@ form.addEventListener("submit", (event) => {
   const cant = Number.parseInt(cantidad.value);
   const prec = Number.parseInt(precio.value);
   const estado = estadoSelect.value;
-  const total = Calcular(cant,prec,parseFloat(estado))
-  resultadoDiv.innerHTML = "<p>Cantidad:  " + cant + "</p>" + "<p> Precio:  "+ prec+"</p>"
-  + "<p> Tasa de impuesto:  "+ estado+"</p>" + "<p> Precio Neto:  "+ total+"</p>";
+  const resultado = Calcular(cant, prec, parseFloat(estado));
+
+  let resultadoHTML = "<p>Cantidad:  " + cant + "</p>" + "<p> Precio:  " + prec + "</p>" + "<p> Tasa de impuesto:  " + estado + "</p>";
+
+  const descuento = resultado.descuento;
+  resultadoHTML += "<p> Descuento:  " + descuento + "</p>";
+
+  const total_con_impuesto = resultado.total_con_impuesto;
+  resultadoHTML += "<p> Precio Neto:  " + total_con_impuesto + "</p>";
+
+  resultadoDiv.innerHTML = resultadoHTML;
 });
