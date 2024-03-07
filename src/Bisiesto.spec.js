@@ -1,9 +1,13 @@
 import Calcular from "./Bisiesto.js";
 
-describe("Calcular Total", () => {
-  it("Esta bien CA:", () => {
-    expect(Calcular(20, 3, 8.25).total_con_impuesto).toEqual(64.95);
+  describe("Calcular Total", () => {
+    it("Esta bien CA:", () => {
+      expect(Calcular(20, 3, 8.25)).toEqual({
+      total_con_impuesto: 64.95,
+      descuento: 0.00,
+    });
   });
+
   it("Esta bien TX:", () => {
     expect(Calcular(20, 3, 6.25).total_con_impuesto).toEqual(63.75);
   });
