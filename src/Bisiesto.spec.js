@@ -9,7 +9,10 @@ import Calcular from "./Bisiesto.js";
   });
 
   it("Esta bien TX:", () => {
-    expect(Calcular(20, 3, 6.25).total_con_impuesto).toEqual(63.75);
+    expect(Calcular(20, 3, 6.25)).toEqual({
+      total_con_impuesto: 63.75,
+      descuento: 0.00, 
+    });
   });
   it("Esta bien AL:", () => {
     expect(Calcular(20, 3, 4).total_con_impuesto).toEqual(62.4);
