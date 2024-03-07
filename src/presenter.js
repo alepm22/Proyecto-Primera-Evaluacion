@@ -1,9 +1,11 @@
 import Calcular from "./Bisiesto.js";
+
 const cantidad = document.querySelector("#cantidad-input");
 const precio = document.querySelector("#precio-input");
 const estadoSelect = document.querySelector("#estado--select");
 const form = document.querySelector("#totalizador-form");
 const resultadoDiv = document.querySelector("#resultado-div");
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
