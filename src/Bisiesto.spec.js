@@ -50,6 +50,12 @@ import Calcular from "./Bisiesto.js";
       descuento: 0.00,
     });
   });
+  it("Esta bien Muebles:", () => {
+    expect(Calcular(20, 3, 3)).toEqual({
+      total_con_impuesto: 61.80,
+      descuento: 0.00,
+    });
+  });
   it("Esta bien con descuento 1000:", () => {
     expect(Calcular(500, 2, 6.65)).toEqual({
       total_con_impuesto: 1034.51,
