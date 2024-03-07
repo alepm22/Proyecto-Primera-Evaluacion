@@ -13,6 +13,11 @@ form.addEventListener("submit", (event) => {
   const prec = Number.parseInt(precio.value);
   const estado = estadoSelect.value;
   const resultado = Calcular(cant, prec, parseFloat(estado));
+  
+  if (isNaN(cant) || isNaN(prec) || cant <= 0 || prec <= 0) {
+    alert("Por favor, ingrese valores numéricos válidos para Cantidad y Precio.");
+    return;
+  }
 
   let resultadoHTML = "<p> Tasa de impuesto: " + estado + "%</p>";
 
