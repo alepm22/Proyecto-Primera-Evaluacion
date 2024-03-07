@@ -21,7 +21,10 @@ import Calcular from "./Bisiesto.js";
     });
   });
   it("Esta bien NV:", () => {
-    expect(Calcular(20, 3, 8).total_con_impuesto).toEqual(64.8);
+    expect(Calcular(20, 3, 8)).toEqual({
+      total_con_impuesto: 64.8,
+      descuento: 0.00,
+    });
   });
   it("Esta bien UT:", () => {
     expect(Calcular(20, 3, 6.65).total_con_impuesto).toEqual(63.99);
