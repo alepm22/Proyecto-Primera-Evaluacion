@@ -38,6 +38,12 @@ import Calcular from "./Bisiesto.js";
       descuento: 0.00,
     });
   });
+  it("Esta bien Bebidas Alcoholicas:", () => {
+    expect(Calcular(20, 3, 7)).toEqual({
+      total_con_impuesto: 64.20,
+      descuento: 0.00,
+    });
+  });
   it("Esta bien con descuento 1000:", () => {
     expect(Calcular(500, 2, 6.65)).toEqual({
       total_con_impuesto: 1034.51,
